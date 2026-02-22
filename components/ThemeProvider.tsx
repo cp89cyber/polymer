@@ -19,7 +19,7 @@ export const useTheme = () => {
 
 export default function ThemeProvider({
   children,
-  initialDarkMode = true,
+  initialDarkMode = false,
 }: {
   children: React.ReactNode;
   initialDarkMode?: boolean;

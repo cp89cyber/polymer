@@ -48,7 +48,9 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const theme = cookieStore.get("theme")?.value;
-  const isDarkMode = theme === "light" ? false : true;
+  
+  // CHANGED: Now it defaults to false (light) unless the cookie explicitly says "dark"
+  const isDarkMode = theme === "dark";
 
   return (
     <html lang="en" className={isDarkMode ? "dark" : ""}>
